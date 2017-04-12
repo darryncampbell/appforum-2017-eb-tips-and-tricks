@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="javascript">
+function reloadPage()
+{
+	window.location.reload(true);
+}
+function submitForm()
+{
+	//  Check to see whether data was entered
+	var partText = document.getElementById("txt_part").value;
+	var assetText = document.getElementById("txt_asset").value;
+	var qtyText = document.getElementById("txt_qty").value;
+	document.getElementById("txt_part").blur();
+	document.getElementById("txt_asset").blur();
+	document.getElementById("txt_qty").blur();
+
+	if (partText != "" && assetText != "" && qtyText != "")
+	{
+		document.getElementById("out_success").style.visibility = "visible";
+		setTimeout("initPage(true);", 2500);
+	}
+	else
+	{
+		document.getElementById("out_failure").style.visibility = "visible";
+		setTimeout("initPage(true);", 2500);
+	}
+}
+
+function pageLoad()
+{
+	initPage(true);
+}
+function initPage(clearFields)
+{
+	if (clearFields)
+	{
+		document.getElementById("txt_part").value = "";
+		document.getElementById("txt_asset").value = "";
+		document.getElementById("txt_qty").value = "";
+	}
+	
+	document.getElementById("txt_part").focus();
+	document.getElementById("out_success").style.visibility = "hidden";
+	document.getElementById("out_failure").style.visibility = "hidden";
+}
+</SCRIPT>
+
+</HEAD>
+<!--  Capture 'S' shortcut key -->
+<META HTTP-Equiv="KeyCapture" Content="KeyValue:0x53; Dispatch:False; KeyEvent:url('JavaScript:submitForm();')">
+
+
+<BODY onload="pageLoad()">
+<!--  Debug Only  -->
+<a href="javascript:reloadPage()">Reload</a> 18
+<H1>Scan Product</H1>
+<FORM action="javascript:submitForm()">
+<TABLE>
+<TR><TD>
+Part ID:
+</TD><TD><INPUT TYPE="text" ID="txt_part">
+</TD></TR><TR><TD>
+Asset#:
+</TD><TD>
+<INPUT TYPE="text" ID="txt_asset">
+</TD></TR><TR><TD>
+Quantity:
+</TD><TD>
+<INPUT TYPE="text" ID="txt_qty">
+</TD></TR>
+<TR><TD>
+<INPUT TYPE="SUBMIT" ID="btn_submit" value="Submit">
+</TD><TD>
+Press 'S' to submit
+</TD></TR>
+</TABLE>
+</FORM>
+
+<H3>
+<SPAN id="out_success">
+<center><font color="green" size="+2">Success</font></center>
+</SPAN>
+</H3>
+
+<H3>
+<SPAN id="out_failure">
+<center><font color="red" size="+2">Try Again</font></center>
+</SPAN>
+</H3>
+
+
+</BODY>
+</HTML>

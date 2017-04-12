@@ -1,0 +1,11 @@
+python -m http.server 8082
+
+TC51:
+adb push Config.xml /sdcard/Android/data/com.symbol.enterprisebrowser/Config.xml
+adb push filelist.txt /sdcard/Android/data/com.symbol.enterprisebrowser/filelist.txt
+
+TC55:
+adb push Config.xml /storage/sdcard0/Android/data/com.symbol.enterprisebrowser/Config.xml
+adb push filelist.txt /storage/sdcard0/Android/data/com.symbol.enterprisebrowser/filelist.txt
+
+adb push dwprofile_EnterpriseBrowser.db /storage/sdcard0/Android/data/com.symbol.datawedge/files/dwprofile_EnterpriseBrowser.db

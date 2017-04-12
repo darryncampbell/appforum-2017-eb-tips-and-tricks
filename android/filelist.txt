@@ -1,0 +1,9 @@
+<script type="text/javascript" src="./android/dom_inject/ebapi-modules.js" pages="*" ></script>
+<script type="text/javascript" src="./android/dom_inject/send_intents.js" pages="*" ></script>
+<script type="text/javascript" src="./android/dom_inject/receive_intents.js" pages="*" ></script>
+<script type="text/javascript" src="./android/dom_inject/input_types.js" pages="*" ></script>
+<script type="text/javascript" src="./android/dom_inject/bootsrapify_common.js" pages="*" ></script>
+<script type="text/javascript" src="./android/dom_inject/bootstrap-3.3.7-dist/js/jquery-3.2.0.js" pages="*" ></script>
+<script type="text/javascript" src="./android/dom_inject/bootstrap-3.3.7-dist/js/bootstrap.js" pages="*" ></script>
+<link rel="stylesheet" type="text/css" href="./android/dom_inject/bootstrap-3.3.7-dist/css/bootstrap.min.css" pages="*"/>
+<script type="text/javascript" src="./android/dom_inject/inject_key_capture.js" pages="*" ></script>
